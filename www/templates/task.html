@@ -1,0 +1,23 @@
+<ion-view view-title="Tasks" cache-view="false">
+  <ion-header-bar class="bar-stable">
+    <button class="button button-icon ion-ios-arrow-back" ng-click="goBack()"></button>
+    <h1 class="title">Tasks</h1>
+  </ion-header-bar>
+  <ion-content>
+	<a href="#/home">Home</a>
+  	<a href="#/task">Tasks</a>
+  	<!-- <a href="#/registered">Registered</a>
+ -->  	<a href="#/profile">Profile</a>
+  	<div ng-repeat="task in tasks track by $index">
+      <br>
+      <p> {{tasks[$index].description}} </p>
+      <p> {{tasks[$index].time}} min </p>
+      <p> register :{{tasks[$index].registed}} </p>
+      <div ng-if="tasks[$index].registed">
+        <input class="button button-block button-positive" type="submit" ng-click="approveTask(tasks[$index]._id)" value="Approve" />
+      </div>
+      <!-- <input class="button button-block button-dangerous" type="submit" ng-click="approveTask(tasks[$index]._id)" value="Delete" /> -->
+      <hr>
+  	</div>
+  </ion-content>
+</ion-view>
