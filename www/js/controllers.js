@@ -1,7 +1,7 @@
 angular.module('app.controllers', ['ngCordova'])
 
 .controller('loginCtrl', function ($scope, $state, $rootScope, $http) {
-  $rootScope.url = 'http://localhost:8080/api/';
+  $rootScope.url = 'https://calm-castle-40631.herokuapp.com/api/';
   $scope.signIn = function (email) {
     $http({
     	method: 'POST',
