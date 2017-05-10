@@ -92,6 +92,7 @@ angular.module('app.controllers', ['ngCordova'])
     $ionicHistory.nextViewOptions({
     disableBack: true
     });
+    delete $rootScope.kid;
     $state.go('listkid');
   }
   $scope.addKid = function (kid) {
@@ -118,6 +119,7 @@ angular.module('app.controllers', ['ngCordova'])
     $ionicHistory.nextViewOptions({
     disableBack: true
     });
+    delete $rootScope.kid;
     $state.go('listkid');
   }
   $scope.addTask = function (task) {
@@ -150,6 +152,7 @@ angular.module('app.controllers', ['ngCordova'])
     $ionicHistory.nextViewOptions({
     disableBack: true
     });
+    delete $rootScope.kid;
     $state.go('listkid');
   }
   $scope.listAllTaskByKid = function () {
@@ -206,6 +209,7 @@ angular.module('app.controllers', ['ngCordova'])
     $ionicHistory.nextViewOptions({
     disableBack: true
     });
+    delete $rootScope.kid;
     $state.go('listkid');
   }
   $scope.getKidProfile = function () {
