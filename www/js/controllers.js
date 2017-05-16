@@ -1,7 +1,7 @@
 angular.module('app.controllers', ['ngCordova'])
 
 .controller('loginCtrl', function ($scope, $state, $rootScope, $http) {
-  $rootScope.url = 'http://localhost:8080/api/';
+  $rootScope.url = 'https://calm-castle-40631.herokuapp.com/api/';
   $scope.signIn = function (email) {
     $http({
     	method: 'POST',
@@ -34,6 +34,7 @@ angular.module('app.controllers', ['ngCordova'])
     $ionicHistory.nextViewOptions({
     disableBack: true
     });
+    
     $state.go('login');
   }
 
@@ -92,6 +93,7 @@ angular.module('app.controllers', ['ngCordova'])
     $ionicHistory.nextViewOptions({
     disableBack: true
     });
+    delete $rootScope.kid;
     $state.go('listkid');
   }
   $scope.addKid = function (kid) {
@@ -118,6 +120,7 @@ angular.module('app.controllers', ['ngCordova'])
     $ionicHistory.nextViewOptions({
     disableBack: true
     });
+    delete $rootScope.kid;
     $state.go('listkid');
   }
   $scope.addTask = function (task) {
@@ -150,6 +153,7 @@ angular.module('app.controllers', ['ngCordova'])
     $ionicHistory.nextViewOptions({
     disableBack: true
     });
+    delete $rootScope.kid;
     $state.go('listkid');
   }
   $scope.listAllTaskByKid = function () {
@@ -206,6 +210,7 @@ angular.module('app.controllers', ['ngCordova'])
     $ionicHistory.nextViewOptions({
     disableBack: true
     });
+    delete $rootScope.kid;
     $state.go('listkid');
   }
   $scope.getKidProfile = function () {
